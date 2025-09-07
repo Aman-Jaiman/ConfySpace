@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference Rooms</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #dff9fb, #c7ecee);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0984e3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .room-section {
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+
+    .room-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .room-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .room-card h4 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .room-card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 50px;
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #00b894;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #019875;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: auto;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .room-card p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Our Conference Rooms</h1>
+    <p>Explore available rooms and their features</p>
+  </header>
+
+  <section class="room-section">
+    <div class="room-container">
+
+      <div class="room-card">
+        <h4>ROOM A</h4>
+        <img
+          src="https://cdn.sanity.io/images/uqxwe2qj/production/aa64141e7345a49097059ed8df68be12c7b219d1-7732x4879.jpg?q=80&auto=format&fit=clip&w=1440"
+          alt="Room A">
+        <p>Capacity: 12 people<br>Facilities: Projector, Wi-Fi, AC<br>Price: ₹2100/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM B</h4>
+        <img src="https://www.displaynote.com/content/uploads/2023/03/iStock-1333390966-1-1024x519.jpg" alt="Room B">
+        <p>Capacity: 12 people<br>Facilities: Projector, Wi-Fi, AC<br>Price: ₹1200/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM C</h4>
+        <img src="https://zoapi.com/wp-content/uploads/2024/08/conference-room-etiquettes.jpg" alt="Room C">
+        <p>Capacity: 10 people<br>Facilities: AC, Wi-Fi<br>Price: ₹950/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM D</h4>
+        <img src="https://smartway2.com/wp-content/uploads/2021/01/conference-room-setup-blog.jpg" alt="Room D">
+        <p>Capacity: 4 people<br>Facilities: Whiteboard,Projector, AC, Wi-Fi <br>Price: ₹2300/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM E</h4>
+        <img src="https://www.appliedglobal.com/wp-content/uploads/blog-images/conference-room-technologies.jpg"
+          alt="Room E">
+        <p>Capacity: 20 people<br>Facilities: Wi-Fi, AC<br>Price: ₹1800/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM F</h4>
+        <img
+          src="https://ctfassets.imgix.net/vh7r69kgcki3/7xLLwJUM4mEIbQFxK3wd7f/79093296d49593b9e207471b01c0c92b/Web_150DPI-2023_04_15_ATL_Lifestyle_Staged_Meeting_Room_05434_1.jpg?auto=format%20compress&fit=crop&q=50&w=750&h=422"
+          alt="Room F">
+        <p>Capacity: 6 people<br>Facilities: Monitor, Wi-Fi ,AC<br>Price: ₹950/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM G</h4>
+        <img
+          src="https://ctfassets.imgix.net/vh7r69kgcki3/46VeGE2tnqmkRLYI6VEJeh/9e35ea0ec8c67569128be3f0bccff6eb/Web_150DPI-20221216_WeWork_Product_Shoot_Q4_3.jpg?auto=format%20compress&fit=crop&q=50&w=750&h=422"
+          alt="Room G">
+        <p>Capacity: 8 people<br>Facilities: Projector, AC, Wi-Fi<br>Price: ₹1450/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM H</h4>
+        <img
+          src="https://ctfassets.imgix.net/vh7r69kgcki3/4flxQHFNHBOi0KPqbsCIDT/d0de38ef626b8af15757bf5a1cea9816/Web_150DPI-WeWork_17_St_Helens_Place_London_9_sq.jpg?auto=format%20compress&fit=crop&q=50&w=750&h=750"
+          alt="Room H">
+        <p>Capacity: 12 people<br>Facilities: Projector, Wi-Fi, AC<br>Price: ₹1350/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM I</h4>
+        <img src="https://wolfvision.com/uploads/media/x1220/05/1615-crt_2.jpg?v=3-0" alt="Room I">
+        <p>Capacity: 7 people<br>Facilities: Wi-Fi, AC, TV<br>Price: ₹1100/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM J</h4>
+        <img
+          src="https://www.coxblue.com/wp-content/uploads/2019/01/6-Ways-Technology-Can-Transform-Your-Conference-Room-and-Your-Employee-Meetings.jpg"
+          alt="Room J">
+        <p>Capacity: 9 people<br>Facilities:Projector, AC, Wi-Fi<br>Price: ₹1750/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM K</h4>
+        <img
+          src="https://i0.wp.com/myhqblog.in/wp-content/uploads/2024/07/meeting-room-in-india.jpg?resize=1200%2C640&ssl=1"
+          alt="Room K">
+        <p>Capacity: 14 people<br>Facilities: Projector, AC, Wi-Fi<br>Price: ₹1850/hr</p>
+      </div>
+
+      <div class="room-card">
+        <h4>ROOM L</h4>
+        <img src="https://media.maiortvlift.com/maiormover/uploads/2024/05/luxury-meeting-room.jpg" alt="Room L">
+        <p>Capacity: 12 people<br>Facilities: Projector, AC, Wi-Fi<br>Price: ₹2250/hr</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <button onclick="location.href='customerlogin.html'" id="book">BOOK NOW</button>
+  </section>
+
+  <footer class="footer" id="footer">
+    <p>&copy; 2025 RM:System | Designed by <a href="#">Aman Sharma</a></p>
+    <p>Contact: <a href="mailto:amanjaiman0010@gmail.com">amanjaiman0010@gmail.com</a> |<a href="tel: +91-6378067254">
+        +91-6378067254</a></p>
+  </footer>
+  <!-- java script -->
+   <script>
+     document.getElementById("book").onclick = function () {
+      alert("Sign as a Customer |")
+      window.location.href = "customerlogin.html";
+    };
+   </script>
+</body>
+
+</html>
